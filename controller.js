@@ -2,26 +2,30 @@ import { APIs } from './api.js';
 import { Model } from './model.js';
 import { View } from './view.js';
 
+
 const Controller = (() => {
-    
-    const state = new Model.State()
-    console.log("this is a state",state)
+    const state = new Model.State();
+    console.log("State created:", state);
 
     const init = () => {
+        // re-render goals whenever state updates
         state.subscribe(() => {
             View.renderGoals(state.goals);
         });
 
-        // Get goals
+        // Load oals from server
         APIs.getGoals()
             .then((goalsFromServer) => {
-                state.goals = goalsFromServer;
+                state.goals = goalsFromServer; 
+            })
+            .catch((error) => {
+                console.error("Error fetching goals:", error);
             });
 
-        // Form handler
+        // Handle form submission
         const form = document.querySelector("form");
         form.addEventListener("submit", (e) => {
-            e.preventDefault();
+            e.preventDefault(); // Prevent page reload
 
             const description = document.getElementById("description").value;
             const categorySelect = document.getElementById("category");
@@ -37,19 +41,24 @@ const Controller = (() => {
 
             APIs.createGoal(newGoal)
                 .then((createdGoal) => {
-                    state.addGoal(createdGoal);
-                    View.clearForm();
+                    state.addGoal(createdGoal); // Update state with the newly created goal
+                    View.clearForm(); // Clear form after submit
+                })
+                .catch((error) => {
+                    console.error("Error creating new goal:", error);
                 });
         });
 
-        // Delete handler
+        // Handle delete goal
         View.listEl.addEventListener("click", (e) => {
             if (e.target.classList.contains("btn--delete")) {
                 const id = e.target.dataset.id;
-                console.log('this is the string', e.target.dataset.id);
                 APIs.deleteGoal(id)
                     .then(() => {
-                        state.deleteGoal(Number(id));
+                        state.deleteGoal(Number(id)); // Remove from state
+                    })
+                    .catch((error) => {
+                        console.error("Error deleting goal:", error);
                     });
             }
         });
@@ -57,5 +66,6 @@ const Controller = (() => {
 
     return { init };
 })();
+
 
 Controller.init();
