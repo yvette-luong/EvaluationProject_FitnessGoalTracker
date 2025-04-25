@@ -17,12 +17,17 @@ export const APIs = (() => {
     }
 
     const deleteGoal = (id) => {
-        return fetch(`${baseURL}/${id}`, {
+        return fetch(`${baseURL}/${String(id)}`, {
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json",
             },
-        }).then((res) => res.json());
+        }).then((res) => {
+            if (!res.ok) {
+                throw new Error(`Failed to delete goal with id ${id}`);
+            }
+            return; 
+        });
     };
 
     return { getGoals, createGoal, deleteGoal };

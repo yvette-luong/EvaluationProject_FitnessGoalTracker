@@ -1,17 +1,10 @@
 {
   "goals": [
     {
-      "id": 1,
+      "id": "4c7f",
       "description": "Do 20 push-ups",
-      "category": "Strength Training",
+      "category": "Flexibility",
       "repetitions": "20 repetitions",
-      "achieved": false
-    },
-    {
-      "id": "176d",
-      "description": "Be Healthy",
-      "category": "Cardio",
-      "repetitions": "10mins",
       "achieved": false
     }
   ]
