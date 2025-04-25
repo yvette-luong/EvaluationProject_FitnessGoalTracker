@@ -27,5 +27,4 @@ export const APIs = (() => {
 
     return { getGoals, createGoal, deleteGoal };
 
-
 })();
