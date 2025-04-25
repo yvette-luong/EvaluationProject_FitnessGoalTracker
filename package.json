@@ -1,7 +1,8 @@
 {
   "name": "evaluationproject_fitnessgoaltracker",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "controller.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "json-server --watch db.json --port 3000",
