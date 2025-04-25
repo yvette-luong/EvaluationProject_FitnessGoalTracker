@@ -3,10 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./style.css"> 
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <title>Fitness Goal Tracker</title>
 </head>
 
@@ -16,7 +18,7 @@
         <!-- Goal Input -->
         <label for="description">Fitness Goal:</label><br>
         <input type="text" id="description" name="description" placeholder="Enter Fitness Goal" required><br><br>
-       
+
         <!-- Category dropdown -->
         <label for="category">Category:</label><br>
         <select id="category" name="category" required>
@@ -25,15 +27,23 @@
             <option value="flexibility">Flexibility</option>
             <option value="mobility">Mobility</option>
         </select> <br></br>
-        
+
         <!-- Repetitions input -->
         <label for="repetition">Repetitions:</label><br>
         <input type="text" id="repetitions" name="repetitions" placeholder="Enter Repetitions" required><br></br>
-        
+
         <!-- Button -->
         <button type="submit">
             Add Goal
         </button>
     </form>
-
+    <!-- Goals List -->
+    <div id="goal-list">
+        <ul class="lists" style="list-style-type:none;" >
+            <li>
+                Run 5km <span>Cardio (30 minutes)</span>
+                <button class="btn--delete">Mark As Achieved</button>
+            </li>
+        </ul>
+    </div>
 </body>
