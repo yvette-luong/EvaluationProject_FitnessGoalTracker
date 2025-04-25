@@ -1,0 +1,26 @@
+{
+  "name": "evaluationproject_fitnessgoaltracker",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "json-server --watch db.json --port 3000",
+    "dev": "live-server --ignore=db.json ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yvette-luong/EvaluationProject_FitnessGoalTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yvette-luong/EvaluationProject_FitnessGoalTracker/issues"
+  },
+  "homepage": "https://github.com/yvette-luong/EvaluationProject_FitnessGoalTracker#readme",
+  "description": "",
+  "devDependencies": {
+    "json-server": "^1.0.0-beta.3",
+    "live-server": "^1.2.0"
+  }
+}
