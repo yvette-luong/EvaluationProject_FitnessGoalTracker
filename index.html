@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>Fitness Goal Tracker</title>
+</head>
+
+<body>
+    <h1> Fitness Goal Tracker </h1>
+    <form>
+        <!-- Goal Input -->
+        <label for="goal">Fitness Goal:</label><br>
+        <input type="text" id="goal" name="goal" placeholder="Enter Fitness Goal" required><br><br>
+       
+        <!-- Category dropdown -->
+        <label for="category">Category:</label><br>
+        <select id="category" name="category" required>
+            <option value="strength">Strength Training</option>
+            <option value="cardio">Cardio</option>
+            <option value="flexibility">Flexibility</option>
+            <option value="mobility">Mobility</option>
+        </select> <br></br>
+        
+        <!-- Repetitions input -->
+        <label for="repetition">Repetitions:</label><br>
+        <input type="text" id="repititions" name="repetitions" placeholder="Enter Repetitions" required><br><br>
+        
+        <!-- Button -->
+        <button type="submit">
+            Add Goal
+        </button>
+    </form>
+
+</body>
