@@ -1,4 +1,3 @@
-import { APIs } from "./api";
 
 export const Model = (() => {
     class State {
