@@ -50,16 +50,15 @@ const Controller = (() => {
         });
 
         // Handle delete goal
-        View.listEl.addEventListener("click", (e) => {
+        View.listEl.addEventListener("click", async (e) => {
             if (e.target.classList.contains("btn--delete")) {
                 const id = e.target.dataset.id;
-                APIs.deleteGoal(id)
-                    .then(() => {
-                        state.deleteGoal(Number(id)); // Remove from state
-                    })
-                    .catch((error) => {
-                        console.error("Error deleting goal:", error);
-                    });
+                try {
+                    await APIs.deleteGoal(id); 
+                    state.deleteGoal(id);
+                } catch (error) {
+                    console.error("Error deleting goal:", error);
+                }
             }
         });
     };

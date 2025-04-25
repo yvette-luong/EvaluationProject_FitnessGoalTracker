@@ -1,10 +1,17 @@
 {
   "goals": [
     {
-      "id": "4c7f",
-      "description": "Do 20 push-ups",
-      "category": "Flexibility",
-      "repetitions": "20 repetitions",
+      "id": "15ab",
+      "description": "Test More",
+      "category": "Cardio",
+      "repetitions": "15mins",
+      "achieved": false
+    },
+    {
+      "id": "c423",
+      "description": "Test My Strength 2",
+      "category": "Mobility",
+      "repetitions": "20 mins",
       "achieved": false
     }
   ]
