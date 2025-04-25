@@ -1,12 +1,18 @@
 {
-    "goals": [
-      {
-        "id": 1,
-        "description": "Do 20 push-ups",
-        "category": "Strength Training",
-        "repetitions": "20 repetitions",
-        "achieved": false
-      }
-    ]
-  }
-  
+  "goals": [
+    {
+      "id": 1,
+      "description": "Do 20 push-ups",
+      "category": "Strength Training",
+      "repetitions": "20 repetitions",
+      "achieved": false
+    },
+    {
+      "id": "176d",
+      "description": "Be Healthy",
+      "category": "Cardio",
+      "repetitions": "10mins",
+      "achieved": false
+    }
+  ]
+}
