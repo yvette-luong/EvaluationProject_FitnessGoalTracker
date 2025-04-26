@@ -54,10 +54,20 @@ const Controller = (() => {
             if (e.target.classList.contains("btn--delete")) {
                 const id = e.target.dataset.id;
                 try {
-                    await APIs.deleteGoal(id); 
-                    state.deleteGoal(id);
+                    // Update the goal to achieved
+                    const updatedGoal = { achieved: true };
+        
+                    await APIs.updateGoal(id, updatedGoal);
+        
+                    // Update frontend state manually
+                    const updatedGoals = state.goals.map(goal =>
+                        Number(goal.id) === Number(id) ? { ...goal, achieved: true } : goal
+                    );
+                    state.goals = updatedGoals; 
+                    View.showMessage("You just completed a goal!");
+
                 } catch (error) {
-                    console.error("Error deleting goal:", error);
+                    console.error("Error marking goal as achieved:", error);
                 }
             }
         });

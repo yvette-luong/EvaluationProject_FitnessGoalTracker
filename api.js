@@ -30,6 +30,22 @@ export const APIs = (() => {
         });
     };
 
-    return { getGoals, createGoal, deleteGoal };
+    const updateGoal = (id, updatedGoal) => {
+        return fetch(`${baseURL}/${String(id)}`, {
+            method: "PATCH", 
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(updatedGoal),
+        }).then((res) => {
+            if (!res.ok) {
+                throw new Error(`Failed to update goal with id ${id}`);
+            }
+            return res.json();
+        });
+    };
+    
+
+    return { getGoals, createGoal, deleteGoal, updateGoal };
 
 })();

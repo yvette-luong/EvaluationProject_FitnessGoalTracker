@@ -15,36 +15,40 @@
 
 <body>
     <h1> Fitness Goal Tracker </h1>
+
     <form>
         <!-- Goal Input -->
-        <label for="description">Fitness Goal:</label><br>
-        <input type="text" id="description" name="description" placeholder="Enter Fitness Goal" required><br><br>
+        <label for="description">Fitness Goal:</label>
+        <input type="text" id="description" name="description" placeholder="Enter Fitness Goal" required>
 
         <!-- Category dropdown -->
-        <label for="category">Category:</label><br>
+        <label for="category">Category:</label>
         <select id="category" name="category" required>
             <option value="strength">Strength Training</option>
             <option value="cardio">Cardio</option>
             <option value="flexibility">Flexibility</option>
             <option value="mobility">Mobility</option>
-        </select> <br></br>
+        </select>
 
         <!-- Repetitions input -->
-        <label for="repetitions">Repetitions:</label><br>
-        <input type="text" id="repetitions" name="repetitions" placeholder="Enter Repetitions" required><br></br>
+        <label for="repetitions">Repetitions:</label>
+        <input type="text" id="repetitions" name="repetitions" placeholder="Enter Repetitions" required>
 
         <!-- Button -->
-        <button type="submit">
+        <button type="submit" class="add-goal">
             Add Goal
         </button>
     </form>
     <!-- Goals List -->
     <div id="goal-list">
         <ul class="lists">
-            <li>
+            <li class="list-items">
                 Run 5km <span>Cardio (30 minutes)</span>
-                <button class="btn--delete">Mark As Achieved</button>
+                <button class="btn--delete" data-id="1">Mark As Achieved</button>
             </li>
         </ul>
+    </div>
+
+    <div id="message">
     </div>
 </body>

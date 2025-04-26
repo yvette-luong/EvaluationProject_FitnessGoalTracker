@@ -18,9 +18,23 @@ export const View = (() => {
         document.querySelector("form").reset();
     };
 
+    //show marked message
+    const showMessage = (text) => {  
+        const messageEl = document.getElementById('message');
+        if (!messageEl) return; // if no message div, skip
+
+        messageEl.textContent = text;
+        messageEl.style.display = 'block';
+
+        setTimeout(() => {
+            messageEl.style.display = 'none';
+        }, 2000);
+    };
+
     return {
         renderGoals,
         clearForm,
-        listEl
+        listEl, 
+        showMessage
     };
 })();

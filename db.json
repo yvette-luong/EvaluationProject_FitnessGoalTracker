@@ -2,17 +2,38 @@
   "goals": [
     {
       "id": "15ab",
-      "description": "Test More",
+      "description": "Cardio",
       "category": "Cardio",
       "repetitions": "15mins",
-      "achieved": false
+      "achieved": true
     },
     {
       "id": "c423",
-      "description": "Test My Strength 2",
+      "description": "Walk",
       "category": "Mobility",
       "repetitions": "20 mins",
-      "achieved": false
+      "achieved": true
+    },
+    {
+      "id": "cf3c",
+      "description": "Weight Lifting",
+      "category": "Cardio",
+      "repetitions": "15mins",
+      "achieved": true
+    },
+    {
+      "id": "40c5",
+      "description": "Be Healthy",
+      "category": "Cardio",
+      "repetitions": "20 mins",
+      "achieved": true
+    },
+    {
+      "id": "a1a0",
+      "description": "Run 30 mins",
+      "category": "Cardio",
+      "repetitions": "12 mins",
+      "achieved": true
     }
   ]
 }
