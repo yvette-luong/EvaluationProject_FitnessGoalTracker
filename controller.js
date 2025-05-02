@@ -58,22 +58,31 @@ const Controller = (() => {
                     const updatedGoal = { achieved: true };
         
                     await APIs.updateGoal(id, updatedGoal);
-        
+  
                     // Update frontend state manually
                     const updatedGoals = state.goals.map(goal =>
                         Number(goal.id) === Number(id) ? { ...goal, achieved: true } : goal
                     );
+
+                    //debug
+                    console.log("Updated goal id:", id);
+                    console.log("Updated goals:", updatedGoals);
+
                     state.goals = updatedGoals; 
                     View.showMessage("You just completed a goal!");
 
                 } catch (error) {
                     console.error("Error marking goal as achieved:", error);
                 }
+
+
+
             }
         });
     };
 
     return { init };
+    
 })();
 
 

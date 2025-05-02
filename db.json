@@ -34,6 +34,34 @@
       "category": "Cardio",
       "repetitions": "12 mins",
       "achieved": true
+    },
+    {
+      "id": "cf22",
+      "description": "Yoga ",
+      "category": "Flexibility",
+      "repetitions": "10mins",
+      "achieved": true
+    },
+    {
+      "id": "2ab1",
+      "description": "Jogging",
+      "category": "Cardio",
+      "repetitions": "10mins",
+      "achieved": true
+    },
+    {
+      "id": "f140",
+      "description": "Climbing",
+      "category": "Cardio",
+      "repetitions": "10mins",
+      "achieved": true
+    },
+    {
+      "id": "7b54",
+      "description": "Gym ",
+      "category": "Flexibility",
+      "repetitions": "12 mins",
+      "achieved": true
     }
   ]
 }
